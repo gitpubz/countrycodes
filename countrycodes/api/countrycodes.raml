@@ -1,0 +1,16 @@
+#%RAML 1.0
+title: countrycodes
+version: v1
+baseUri: https://mocksvc.mulesoft.com/mocks/a4c74736-1131-40ab-9c92-06200f362861/api/* # baseUri: http://localhost:8081/api/*
+protocols: [HTTP]
+mediaType: application/json
+description: This API returns all states for given country code
+/countrycode/{isocode}/details:
+ get:
+  description: This returns state details
+  responses: 
+    200:
+      body: 
+       application/json:
+         example: !include response.json
+        
